@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Library Management System chal raha hai!');
+  res.send('Library Management System is working!');
 });
 
 app.get('/books', (req, res) => {
@@ -15,7 +15,7 @@ app.get('/books', (req, res) => {
 app.post('/books', (req, res) => {
   const { title, author } = req.body;
   if (!title || !author) {
-    return res.status(400).json({ error: 'title aur author zaroori hai' });
+    return res.status(400).json({ error: 'title and author is necessary' });
   }
   res.status(201).json(addBook(title, author));
 });
@@ -26,4 +26,5 @@ app.delete('/books/:id', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(Server port ${PORT} par chal raha hai));
+app.listen(PORT, () => console.log('Server port is working on ' + PORT + ' ));
+
