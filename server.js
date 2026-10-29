@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Library Management Systeem is working!');
+  res.send('Library Management System is working!');
 });
 
 app.get('/books', (req, res) => {
